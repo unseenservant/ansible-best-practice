@@ -41,6 +41,12 @@ done
 
 project=$1 
 
+# safety first! 
+if [[ -d ${project} ]] ; then
+echo -e "\n ${project} dir already exists ... aborting"
+exit 1
+fi
+
 # make project folder
 mkdir -vp ${project}
 
