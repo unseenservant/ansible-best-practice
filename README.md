@@ -18,7 +18,7 @@ I sure don't have that kind of time! So I created this small project to do it fo
 
 1. Clone this repo to wherever you plan to use Ansible. Say like an [Ansible Tower](https://www.ansible.com/products/tower) or [Foreman server](https://www.theforeman.org/plugins/foreman_ansible/2.x/index.html)
 2. Ensure ``Ansible-Make-Best-Practice-Dir-Structure.sh`` is executable and located at the root of your working directory. (Ex. ``/home/YourUsername``).
-3. Give the script a single argument, which should be the name of the product infrastructure you plan to manage. (Ex. ``Ansible-Make-Best-Practice-Dir-Structure.sh ProductName``)
+3. Give the script a single argument, which should be the name of the product infrastructure you plan to manage. (Ex. ``./Ansible-Make-Best-Practice-Dir-Structure.sh ProductName``)
 
 Enjoy!
 
