@@ -14,6 +14,10 @@ I sure don't have that kind of time! So I created this small project to do it fo
 | BestPractice-DirectoryLayout.txt | Copied from [Ansible](https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html#directory-layout)'s documentation on the subject |
 | Demo/ | A directory containing a demonstration of the script's output |
 
+## Requirements
+
+1. An operating system with [Bash](https://www.gnu.org/software/bash/) installed. 
+
 ## How to Use
 
 1. Clone this repo to wherever you plan to use Ansible. Say like an [Ansible Tower](https://www.ansible.com/products/tower) or [Foreman server](https://www.theforeman.org/plugins/foreman_ansible/2.x/index.html)

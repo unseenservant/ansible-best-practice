@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-# make a directory structure that conforms to ansible best practices 
+# Makes a directory structure that conforms to Ansible Best Practices
+# Run this script at the rootdir where you want the project to be
+# example: /home/YourUsername/$0
 
-# run this script at the rootdir where you want the project 
-# example: /home/SomeUsername/$0 
-
+# Usage Function
 function Help {
    # Display Help
    echo ""
@@ -39,9 +39,10 @@ while getopts ":h" option; do
    esac
 done
 
-project=$1 
+# Arguments
+project=$1
 
-# safety first! 
+# Safety First!
 if [[ -d ${project} ]] ; then
 echo -e "\n ${project} dir already exists ... aborting"
 exit 1
@@ -50,30 +51,30 @@ fi
 # make project folder
 mkdir -vp ${project}
 
-# make inventory dirs 
+# make inventory dirs
 mkdir -vp ${project}/inventories \
 ${project}/inventories/production \
 ${project}/inventories/staging \
 ${project}/inventories/test \
-${project}/inventories/lab 
+${project}/inventories/lab
 
 # make library dir
-mkdir -vp ${project}/library 
+mkdir -vp ${project}/library
 
 # make module dir
-mkdir -vp ${project}/module_utils 
+mkdir -vp ${project}/module_utils
 
 # make plugin filters dir
-mkdir -vp ${project}/filter_plugins 
+mkdir -vp ${project}/filter_plugins
 
 # make inventory subdirs for each environment & sample files
 for i in production staging test lab ; do
 	touch ${project}/inventories/$i/hosts #inventory file for environment
 	mkdir -vp ${project}/inventories/$i/group_vars/
-	
+
 	touch ${project}/inventories/$i/group_vars/1st-group.yml \
 	${project}/inventories/$i/group_vars/2nd-group.yml
-	
+
 	mkdir -vp ${project}/inventories/$i/host_vars/
 	touch ${project}/inventories/$i/host_vars/1st-hostname.yml
 done
