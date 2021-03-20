@@ -1,0 +1,13 @@
+
+This file marks the top of an Ansible project directory heirarchy
+
+This is where you should run 'git init'
+
+This is where your README.md should go
+
+The contents of this directory and those beneath it has been created 
+to conform to ansible best practices located: 
+ https://docs.ansible.com/ansible/2.8/user_guide/playbooks_best_practices.html#directory-layout
+
+Good Luck
+
